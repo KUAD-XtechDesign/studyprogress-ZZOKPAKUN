@@ -6,7 +6,17 @@ text-align: center;
 
   background-image:
       url("../images/wall.jpg");
+
+    background-size: cover;
+
 }
+.house{
+   position: absolute;
+   height: 20%;
+   width: 20%;
+   z-index:101;
+}
+Colored by Color Scripter
 header{
 
   background-image: url("../images.birdhouse.jpg");
