@@ -5,6 +5,59 @@
     <title>ソフトウェア・ネットワーク演習２</title>
     <link rel="stylesheet" href="../assets/css/custom.css">
     <link rel="stylesheet" href="../assets/css/button.css">
+    <script type="text/javascript">
+
+    var trailimage=["../assets/images/birdss.gif", 300, 300]  //이미지 경로 설정
+    var offsetfrommouse=[10,10]  //커서와 이미지의 간격
+    var displayduration=0
+
+    if (document.getElementById || document.all)
+      document.write('<div id="trailimageid" style="position:absolute;visibility:visible;left:0px;top:0px;width:1px;height:1px;z-index:100;"><img src="'+trailimage[0]+'" border="0" width="'+trailimage[1]+'px" height="'+trailimage[2]+'px"></div>')
+
+    function gettrailobj(){
+      if (document.getElementById)
+        return document.getElementById("trailimageid").style
+      else if (document.all)
+        return document.all.trailimagid.style
+    }
+
+    function truebody(){
+      return (!window.opera && document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+    }
+
+    function hidetrail(){
+      gettrailobj().visibility="hidden"
+      document.onmousemove=""
+    }
+
+    function followmouse(e){
+    var xcoord=offsetfrommouse[0]
+    var ycoord=offsetfrommouse[1]
+      if (typeof e != "undefined"){
+        xcoord+=e.pageX
+        ycoord+=e.pageY
+      }
+      else if (typeof window.event !="undefined"){
+        xcoord+=truebody().scrollLeft+event.clientX
+        ycoord+=truebody().scrollTop+event.clientY
+      }
+
+    var docwidth=document.all? truebody().scrollLeft+truebody().clientWidth : pageXOffset+window.innerWidth-15
+    var docheight=document.all? Math.max(truebody().scrollHeight, truebody().clientHeight) : Math.max(document.body.offsetHeight, window.innerHeight)
+
+      if (xcoord+trailimage[1]+3>docwidth || ycoord+trailimage[2]> docheight)
+        gettrailobj().display="none"
+        else
+          gettrailobj().display=""
+          gettrailobj().left=xcoord+"px"
+          gettrailobj().top=ycoord+"px"
+      }
+      document.onmousemove=followmouse
+
+    if (displayduration>0)
+      setTimeout("hidetrail()", displayduration*1000)
+    </script>
+    
   </head>
   <body class="subject_page">
     <div class="html">
@@ -42,7 +95,8 @@
 </div>
    </header>
   <main>
-<h1>ソフトウェアネットワーク演習２</h1>
+    <h1 class="heading heading--stroke heading--shadow">ソフトウェアネットワーク演習２</h1>
+
 <div class="session">
   <h2>Session:1</h2>
   <h3>課題:1</h3>

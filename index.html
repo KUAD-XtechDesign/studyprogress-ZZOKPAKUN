@@ -7,7 +7,7 @@
     <title>TaeHongSP2_index</title>
     <link rel="stylesheet" href="./assets/css/custom.css">
 <link rel="stylesheet" href="./assets/css/button.css">
-<link rel="stylesheet" href="./assets/css/mouse.js">
+
   </head>
   <body>
     <script type="text/javascript">
@@ -17,7 +17,7 @@
     var displayduration=0
 
     if (document.getElementById || document.all)
-    	document.write('<div id="trailimageid" style="position:absolute;visibility:visible;left:0px;top:0px;width:1px;height:1px"><img src="'+trailimage[0]+'" border="0" width="'+trailimage[1]+'px" height="'+trailimage[2]+'px"></div>')
+    	document.write('<div id="trailimageid" style="position:absolute;visibility:visible;left:0px;top:0px;width:1px;height:1px;z-index:100;"><img src="'+trailimage[0]+'" border="0" width="'+trailimage[1]+'px" height="'+trailimage[2]+'px"></div>')
 
     function gettrailobj(){
     	if (document.getElementById)
@@ -67,13 +67,12 @@
       <div class="html">
         <h1>TAEHONG'sWEB</h1>
   <header>
+
         <div class="html">
 <nav id="main_nav">
+
         <ul>
-
-
-
-        <li><a href="./cv.html">
+  <li><a href="./cv.html">
 <div class="button-container-0">
   <span class="mas">You're</span>
  <button id='work' type="button" name="Hover">CV</button>
@@ -105,15 +104,15 @@
 
 <img width="400" height="400" src="./assets/images/screen.jpg" alt="">
 <h2 class=kamoku>履修科目</h2>
-<h3>前期</h3>
-<ol>
+<h2>前期</h2>
+
 <li>ソフトウェアネットワーク演習I</li>
-</ol>
-<h3>後期</h3>
-<ol>
+
+<h2>後期</h2>
+
   <li>ソフトウェアネットワーク演習II</li>
   <li>クロステックデザイン演習III</li>
-  </ol>
+
   <br></br>
 <br></br>
 <br></br>

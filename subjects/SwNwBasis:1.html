@@ -12,7 +12,7 @@
   var displayduration=0
 
   if (document.getElementById || document.all)
-    document.write('<div id="trailimageid" style="position:absolute;visibility:visible;left:0px;top:0px;width:1px;height:1px"><img src="'+trailimage[0]+'" border="0" width="'+trailimage[1]+'px" height="'+trailimage[2]+'px"></div>')
+    document.write('<div id="trailimageid" style="position:absolute;visibility:visible;left:0px;top:0px;width:1px;height:1px;z-index:100;"><img src="'+trailimage[0]+'" border="0" width="'+trailimage[1]+'px" height="'+trailimage[2]+'px"></div>')
 
   function gettrailobj(){
     if (document.getElementById)
@@ -96,10 +96,11 @@
     </header>
 
 <main>
-  <h1>ソフトウェアネットワーク演習1</h1>
+  <h1 class="heading heading--stroke heading--shadow">ソフトウェアネットワーク演習1</h1>
 
-<hr>
-</main>
+
+
+
   <h1><li><a href="./Photoshop.html">Photoshop</a></li></h1>
 
 
@@ -113,7 +114,7 @@
   <br></br>
   <br></br>
 
-
+</main>
 
 <footer>
 <p>&copy; CHA TAE HONG/クロステックデザインコース2019</p>

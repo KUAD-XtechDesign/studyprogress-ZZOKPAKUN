@@ -7,7 +7,11 @@ text-align: center;
   background-image:
       url("../images/wall.jpg");
 }
+header{
 
+  background-image: url("../images.birdhouse.jpg");
+  position: z-index:150;
+}
 
 h2{
     font-size: 16px;
