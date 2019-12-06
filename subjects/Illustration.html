@@ -5,9 +5,35 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Illustraton_Work</title>
       <link rel="stylesheet" href="../assets/css/custom.css">
       <link rel="stylesheet" href="../assets/css/button.css">
+
+      <script language="JavaScript">
+      /*배경설정이 적용되려면 body태그 내에 지정된 배경이미지가 없어야 합니다.*/
+      day=new Date()
+      x=day.getHours()
+      if(x>=0 && x<5) { //밤 12시 부터 새벽 4시
+      document.write('<body background="../assets/images/night5.jpg">')
+      document.write('Good Night,Little Sweety.')
+      }
+      else if(x>=6 && x<8) { //새벽 4시부터 낮 12시
+      document.write('<body background="../assets/images/wall4.jpg">')
+      document.write('The Sun is rising up.')
+      }
+      else if(x>=8 && x<18) { //낮 12시부터 오후 6시
+      document.write('<body background="../assets/images/wall.jpg">')
+      document.write('Have a Good day.')
+      }
+      else if (x>=18 && x<24) { //오후 6시부터 밤 12시
+      document.write('<body background="../assets/images/wall4.jpg">')
+      document.write('Did you have Fun today?')
+
+      }
+      </script>
+
+
       <script type="text/javascript">
 
       var trailimage=["../assets/images/birdss.gif", 300, 300]
